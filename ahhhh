@@ -19,3 +19,8 @@ AWS 公式が提供している git-remote-codecommit（CodeCommit 専用の Git
 試行にあたり、以下のツールを追加でインストールする必要があります。
 	•	Python（3.x 系）
 	•	git-remote-codecommit モジュール
+
+# CodeCommit 専用のCredential Helperを解除
+git config --global --unset credential.https://git-codecommit.*.amazonaws.com.helper
+# HTTPSパスの利用設定を解除（方法Bの遺残設定）
+git config --global --unset credential.https://git-codecommit.*.amazonaws.com.useHttpPath
